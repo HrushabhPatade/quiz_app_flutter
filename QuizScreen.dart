@@ -590,7 +590,7 @@ class _QuizScreenState extends State<QuizScreen> {
             ),
           ),
 
-          // 👇 Bottom Button
+
           Padding(
             padding: EdgeInsets.all(16),
             child: SizedBox(

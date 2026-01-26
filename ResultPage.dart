@@ -116,7 +116,7 @@ class Resultpage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          if (correctedCount < 8)
+          if (correctedCount <= 8)
             Column(
               children: [
                 Container(
