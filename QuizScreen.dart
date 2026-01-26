@@ -3,565 +3,475 @@ import 'package:flutter/material.dart';
 import 'package:mcqapp/ResultPage.dart';
 import 'package:mcqapp/option_model.dart';
 
+// String jsonString = """{
+//       "data": {
+//   "attemptCount": "0",
+//   "questions": [
+//   {
+//   "questionText": "Emotional intelligence primarily involves:1",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:2",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:3",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:4",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:5",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:6",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:7",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves8:",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:9",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:10",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:11",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:12",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:13",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:14",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:15",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:16",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:17",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:18",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:19",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:20",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:21",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:22",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:23",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:24",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:25",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:26",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:27",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:28",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:29",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   },
+//   {
+//   "questionText": "Emotional intelligence primarily involves:30",
+//   "selectedOptions": [
+//   {
+//   "option1": "Memorizing facts",
+//   "option2": "Managing and understanding emotions",
+//   "option3": "Analyzing data effectively",
+//   "option4": "Increasing IQ levels",
+//   "answer": "Option 1"
+//   }
+//   ]
+//   }
+//   ]
+//   },
+//   "message": "Successful",
+//   "status": "SUCCESS"
+// }""";
+
 String jsonString = """{
-      "data": {
-  "attemptCount": "0",
-  "questions": [
-  {
-  "questionText": "Emotional intelligence primarily involves:1",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:2",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:3",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:4",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:5",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:6",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:7",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves8:",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:9",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:10",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:11",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:12",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:13",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:14",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:15",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:16",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:17",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:18",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:19",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:20",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:21",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:22",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:23",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:24",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:25",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:26",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:27",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:28",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:29",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  },
-  {
-  "questionText": "Emotional intelligence primarily involves:30",
-  "selectedOptions": [
-  {
-  "option1": "Memorizing facts",
-  "option2": "Managing and understanding emotions",
-  "option3": "Analyzing data effectively",
-  "option4": "Increasing IQ levels",
-  "answer": "Option 1"
-  }
-  ]
-  }
-  ]
+  "data": {
+    "attemptCount": "0",
+    "questions": [
+      { "questionText": "What is the capital of India?",
+        "selectedOptions": [{ "option1": "Mumbai", "option2": "New Delhi", "option3": "Chennai", "option4": "Kolkata", "answer": "Option 2" }] },
+
+      { "questionText": "How many days are there in a week?",
+        "selectedOptions": [{ "option1": "5", "option2": "6", "option3": "7", "option4": "8", "answer": "Option 3" }] },
+
+      { "questionText": "Which is the largest planet in our solar system?",
+        "selectedOptions": [{ "option1": "Earth", "option2": "Mars", "option3": "Jupiter", "option4": "Venus", "answer": "Option 3" }] },
+
+      { "questionText": "What is the national animal of India?",
+        "selectedOptions": [{ "option1": "Lion", "option2": "Elephant", "option3": "Tiger", "option4": "Horse", "answer": "Option 3" }] },
+
+      { "questionText": "Which color is made by mixing red and white?",
+        "selectedOptions": [{ "option1": "Pink", "option2": "Purple", "option3": "Brown", "option4": "Orange", "answer": "Option 1" }] },
+
+      { "questionText": "How many continents are there in the world?",
+        "selectedOptions": [{ "option1": "5", "option2": "6", "option3": "7", "option4": "8", "answer": "Option 3" }] },
+
+      { "questionText": "Which animal is known as the King of the Jungle?",
+        "selectedOptions": [{ "option1": "Tiger", "option2": "Lion", "option3": "Elephant", "option4": "Leopard", "answer": "Option 2" }] },
+
+      { "questionText": "What is the national bird of India?",
+        "selectedOptions": [{ "option1": "Parrot", "option2": "Sparrow", "option3": "Peacock", "option4": "Crow", "answer": "Option 3" }] },
+
+      { "questionText": "How many hours are there in a day?",
+        "selectedOptions": [{ "option1": "12", "option2": "18", "option3": "24", "option4": "36", "answer": "Option 3" }] },
+
+      { "questionText": "Which shape has 3 sides?",
+        "selectedOptions": [{ "option1": "Square", "option2": "Rectangle", "option3": "Triangle", "option4": "Circle", "answer": "Option 3" }] },
+
+      { "questionText": "Which is the fastest land animal?",
+        "selectedOptions": [{ "option1": "Horse", "option2": "Dog", "option3": "Cheetah", "option4": "Lion", "answer": "Option 3" }] },
+
+      { "questionText": "What is H2O commonly known as?",
+        "selectedOptions": [{ "option1": "Salt", "option2": "Water", "option3": "Sugar", "option4": "Oxygen", "answer": "Option 2" }] },
+
+      { "questionText": "How many months are there in a year?",
+        "selectedOptions": [{ "option1": "10", "option2": "11", "option3": "12", "option4": "13", "answer": "Option 3" }] },
+
+      { "questionText": "Which planet is known as the Red Planet?",
+        "selectedOptions": [{ "option1": "Earth", "option2": "Venus", "option3": "Mars", "option4": "Jupiter", "answer": "Option 3" }] },
+
+      { "questionText": "Which is the largest ocean in the world?",
+        "selectedOptions": [{ "option1": "Indian Ocean", "option2": "Atlantic Ocean", "option3": "Pacific Ocean", "option4": "Arctic Ocean", "answer": "Option 3" }] },
+
+      { "questionText": "Which fruit is known as the King of Fruits in India?",
+        "selectedOptions": [{ "option1": "Apple", "option2": "Banana", "option3": "Mango", "option4": "Orange", "answer": "Option 3" }] },
+
+      { "questionText": "How many letters are there in the English alphabet?",
+        "selectedOptions": [{ "option1": "24", "option2": "25", "option3": "26", "option4": "27", "answer": "Option 3" }] },
+
+      { "questionText": "Which day comes after Friday?",
+        "selectedOptions": [{ "option1": "Thursday", "option2": "Saturday", "option3": "Sunday", "option4": "Monday", "answer": "Option 2" }] },
+
+      { "questionText": "What do plants need to make food?",
+        "selectedOptions": [{ "option1": "Moonlight", "option2": "Sunlight", "option3": "Fire", "option4": "Smoke", "answer": "Option 2" }] },
+
+      { "questionText": "Which is the tallest animal in the world?",
+        "selectedOptions": [{ "option1": "Elephant", "option2": "Camel", "option3": "Giraffe", "option4": "Horse", "answer": "Option 3" }] },
+
+      { "questionText": "Which gas do humans breathe in?",
+        "selectedOptions": [{ "option1": "Carbon Dioxide", "option2": "Oxygen", "option3": "Nitrogen", "option4": "Hydrogen", "answer": "Option 2" }] },
+
+      { "questionText": "How many wheels does a bicycle have?",
+        "selectedOptions": [{ "option1": "1", "option2": "2", "option3": "3", "option4": "4", "answer": "Option 2" }] },
+
+      { "questionText": "Which is the nearest star to Earth?",
+        "selectedOptions": [{ "option1": "Moon", "option2": "Sun", "option3": "Mars", "option4": "Polaris", "answer": "Option 2" }] },
+
+      { "questionText": "Which is the smallest continent?",
+        "selectedOptions": [{ "option1": "Europe", "option2": "Australia", "option3": "Africa", "option4": "Asia", "answer": "Option 2" }] },
+
+      { "questionText": "Which animal gives us milk?",
+        "selectedOptions": [{ "option1": "Dog", "option2": "Cat", "option3": "Cow", "option4": "Lion", "answer": "Option 3" }] },
+
+      { "questionText": "What is the color of the sun as seen from Earth?",
+        "selectedOptions": [{ "option1": "Blue", "option2": "Green", "option3": "Yellow", "option4": "Red", "answer": "Option 3" }] },
+
+      { "questionText": "Which festival is known as the Festival of Lights?",
+        "selectedOptions": [{ "option1": "Holi", "option2": "Diwali", "option3": "Eid", "option4": "Christmas", "answer": "Option 2" }] },
+
+      { "questionText": "Which instrument is used to see very small objects?",
+        "selectedOptions": [{ "option1": "Telescope", "option2": "Microscope", "option3": "Binoculars", "option4": "Camera", "answer": "Option 2" }] },
+
+      { "questionText": "Which is the longest river in the world?",
+        "selectedOptions": [{ "option1": "Ganga", "option2": "Amazon", "option3": "Nile", "option4": "Yamuna", "answer": "Option 3" }] },
+
+      { "questionText": "How many zeros are there in one thousand?",
+        "selectedOptions": [{ "option1": "1", "option2": "2", "option3": "3", "option4": "4", "answer": "Option 3" }] }
+    ]
   },
   "message": "Successful",
   "status": "SUCCESS"
 }""";
 
-// String jsonString = """{
-//   "data": {
-//     "attemptCount": "0",
-//     "questions": [
-//       {
-//         "questionText": "In mPower, PJP stands for:",
-//         "selectedOptions": [
-//           {
-//             "option1": "Personal Job Profile",
-//             "option2": "Planned Journey Plan",
-//             "option3": "Primary Job Process",
-//             "option4": "Partner Journey Program",
-//             "answer": "Option 2"
-//           }
-//         ]
-//       },
-//       {
-//         "questionText": "Which feature is used to mark retailer visit in mPower?",
-//         "selectedOptions": [
-//           {
-//             "option1": "Attendance",
-//             "option2": "Retailer Check-in",
-//             "option3": "SIM Activation",
-//             "option4": "Expense Claim",
-//             "answer": "Option 2"
-//           }
-//         ]
-//       },
-//       {
-//         "questionText": "Geo-fencing in mPower is mainly used to:",
-//         "selectedOptions": [
-//           {
-//             "option1": "Block SIM cards",
-//             "option2": "Track device battery",
-//             "option3": "Verify physical store visit",
-//             "option4": "Upload KYC documents",
-//             "answer": "Option 3"
-//           }
-//         ]
-//       },
-//       {
-//         "questionText": "Which module is used to view daily sales targets?",
-//         "selectedOptions": [
-//           {
-//             "option1": "KPI Dashboard",
-//             "option2": "Help Desk",
-//             "option3": "Profile Settings",
-//             "option4": "Notification Center",
-//             "answer": "Option 1"
-//           }
-//         ]
-//       },
-//       {
-//         "questionText": "SIP in mPower generally refers to:",
-//         "selectedOptions": [
-//           {
-//             "option1": "Sales Incentive Program",
-//             "option2": "Service Improvement Plan",
-//             "option3": "SIM Issue Portal",
-//             "option4": "Sales Information Page",
-//             "answer": "Option 1"
-//           }
-//         ]
-//       },
-//       {
-//         "questionText": "Which action ensures proper attendance capture?",
-//         "selectedOptions": [
-//           {
-//             "option1": "Daily login",
-//             "option2": "Geo-tagged punch-in",
-//             "option3": "Profile update",
-//             "option4": "Password reset",
-//             "answer": "Option 2"
-//           }
-//         ]
-//       },
-//       {
-//         "questionText": "Retailer onboarding is mainly used to:",
-//         "selectedOptions": [
-//           {
-//             "option1": "Deactivate retailers",
-//             "option2": "Register new retail partners",
-//             "option3": "Block SIM inventory",
-//             "option4": "View competitor data",
-//             "answer": "Option 2"
-//           }
-//         ]
-//       },
-//       {
-//         "questionText": "Which section is used to raise field-related issues?",
-//         "selectedOptions": [
-//           {
-//             "option1": "Help & Support",
-//             "option2": "KPI Summary",
-//             "option3": "SIM Sales",
-//             "option4": "Recharge History",
-//             "answer": "Option 1"
-//           }
-//         ]
-//       },
-//       {
-//         "questionText": "Beat planning in mPower helps to:",
-//         "selectedOptions": [
-//           {
-//             "option1": "Schedule daily market visits",
-//             "option2": "Generate salary slips",
-//             "option3": "Change app language",
-//             "option4": "Download training videos",
-//             "answer": "Option 1"
-//           }
-//         ]
-//       },
-//       {
-//         "questionText": "Which report shows promoter productivity?",
-//         "selectedOptions": [
-//           {
-//             "option1": "Expense Report",
-//             "option2": "Performance Dashboard",
-//             "option3": "Device Info",
-//             "option4": "Profile Summary",
-//             "answer": "Option 2"
-//           }
-//         ]
-//       },
-//
-//       { "questionText": "mPower helps track which of the following?",
-//         "selectedOptions": [{ "option1": "Only SIM stock", "option2": "Field visit & sales performance", "option3": "Only recharge", "option4": "Only complaints", "answer": "Option 2" }] },
-//
-//       { "questionText": "Which feature validates location during store visit?",
-//         "selectedOptions": [{ "option1": "OTP login", "option2": "GPS tagging", "option3": "Manual entry", "option4": "WiFi scan", "answer": "Option 2" }] },
-//
-//       { "questionText": "Distributor hierarchy helps to:",
-//         "selectedOptions": [{ "option1": "Change SIM tariff", "option2": "Track reporting structure", "option3": "Reset password", "option4": "Block user", "answer": "Option 2" }] },
-//
-//       { "questionText": "Which module shows target vs achievement?",
-//         "selectedOptions": [{ "option1": "KPI Tracker", "option2": "Settings", "option3": "Help Desk", "option4": "Profile", "answer": "Option 1" }] },
-//
-//       { "questionText": "Market feedback is mainly used for:",
-//         "selectedOptions": [{ "option1": "Improving sales strategy", "option2": "Changing SIM number", "option3": "Deleting account", "option4": "Recharge reversal", "answer": "Option 1" }] },
-//
-//       { "questionText": "Geo-fence violation indicates:",
-//         "selectedOptions": [{ "option1": "Low battery", "option2": "Out of assigned location", "option3": "Login error", "option4": "SIM blocked", "answer": "Option 2" }] },
-//
-//       { "questionText": "Which action records start of field work?",
-//         "selectedOptions": [{ "option1": "Logout", "option2": "Punch-in", "option3": "Profile edit", "option4": "SIM scan", "answer": "Option 2" }] },
-//
-//       { "questionText": "Which helps managers monitor team activity?",
-//         "selectedOptions": [{ "option1": "Team Dashboard", "option2": "Device Settings", "option3": "Help Desk", "option4": "Logout", "answer": "Option 1" }] },
-//
-//       { "questionText": "Retailer visit history is used to:",
-//         "selectedOptions": [{ "option1": "Delete retailers", "option2": "Analyze coverage & frequency", "option3": "Block SIMs", "option4": "Reset app", "answer": "Option 2" }] },
-//
-//       { "questionText": "Which module supports issue escalation?",
-//         "selectedOptions": [{ "option1": "Help Desk", "option2": "KPI", "option3": "Profile", "option4": "Recharge", "answer": "Option 1" }] },
-//
-//       { "questionText": "Focus product tracking helps to:",
-//         "selectedOptions": [{ "option1": "Increase priority product sales", "option2": "Reduce SIM stock", "option3": "Change password", "option4": "Disable GPS", "answer": "Option 1" }] },
-//
-//       { "questionText": "Which data is mandatory for retailer check-in?",
-//         "selectedOptions": [{ "option1": "Photo & GPS", "option2": "Only name", "option3": "Only mobile", "option4": "Only OTP", "answer": "Option 1" }] },
-//
-//       { "questionText": "Which helps validate physical presence?",
-//         "selectedOptions": [{ "option1": "Manual time entry", "option2": "Geo-tagged attendance", "option3": "Profile photo", "option4": "Password", "answer": "Option 2" }] },
-//
-//       { "questionText": "Which feature supports daily route planning?",
-//         "selectedOptions": [{ "option1": "PJP", "option2": "Help Desk", "option3": "Settings", "option4": "Profile", "answer": "Option 1" }] },
-//
-//       { "questionText": "Which report helps analyze market coverage?",
-//         "selectedOptions": [{ "option1": "Visit Coverage Report", "option2": "Profile Report", "option3": "Password Report", "option4": "Device Report", "answer": "Option 1" }] },
-//
-//       { "questionText": "Which supports compliance for field visits?",
-//         "selectedOptions": [{ "option1": "GPS & Time Stamp", "option2": "Manual notes", "option3": "Profile edit", "option4": "Theme change", "answer": "Option 1" }] },
-//
-//       { "questionText": "Which helps track inactive retailers?",
-//         "selectedOptions": [{ "option1": "Retailer Activity Report", "option2": "Profile", "option3": "Settings", "option4": "Help Desk", "answer": "Option 1" }] },
-//
-//       { "questionText": "Which supports audit of field activity?",
-//         "selectedOptions": [{ "option1": "Visit Logs", "option2": "Theme", "option3": "Profile", "option4": "Logout", "answer": "Option 1" }] },
-//
-//       { "questionText": "Which helps improve distributor productivity?",
-//         "selectedOptions": [{ "option1": "Performance Analytics", "option2": "Wallpaper", "option3": "Profile", "option4": "Logout", "answer": "Option 1" }] },
-//
-//       { "questionText": "Which module helps track daily KPIs?",
-//         "selectedOptions": [{ "option1": "KPI Dashboard", "option2": "Help Desk", "option3": "Settings", "option4": "Profile", "answer": "Option 1" }] }
-//     ]
-//   },
-//   "message": "Successful",
-//   "status": "SUCCESS"
-// }""";
 
 class QuizScreen extends StatefulWidget {
   @override
@@ -630,26 +540,28 @@ class _QuizScreenState extends State<QuizScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              (qIndex + 1).toString() + ".",
+                              "${qIndex + 1}.",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
+                            SizedBox(width: 8),
+                            Expanded(
                               child: Text(
                                 question.questionText,
+                                softWrap: true,
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ),
-                            Spacer(),
+                            SizedBox(width: 8),
                             Text(
                               "5 Marks",
                               style: TextStyle(color: Colors.grey),
                             ),
                           ],
                         ),
+
 
                         for (
                           int optionIndex = 0;
