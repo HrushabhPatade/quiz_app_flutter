@@ -1,34 +1,9 @@
-// class Question {
-//   final String questionText;
-//   final List<String> options;
-//   final int correctIndex;
-//
-//   Question({
-//     required this.questionText,
-//     required this.options,
-//     required this.correctIndex,
-//   });
-//
-//   factory Question.fromJson(Map<String, dynamic> json) {
-//     final optionObj = json['selectedOptions'][0];
-//
-//     return Question(
-//       questionText: json['questionText'],
-//       options: [
-//         optionObj['option1'],
-//         optionObj['option2'],
-//         optionObj['option3'],
-//         optionObj['option4'],
-//       ],
-//     );
-//   }
-// }
 
 
 class Question {
   final String questionText;
   final List<String> options;
-  final int correctIndex; // 0,1,2,3
+  final int correctIndex; 
 
   Question({
     required this.questionText,
